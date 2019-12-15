@@ -7,5 +7,7 @@
 </ion-header>
 
 <ion-content>
+  <input type="text" placeholder="マップを検索する" [(ngModel)]="value" />
+  <button (click)="geocode()">検索</button>
   <google-map></google-map>
 </ion-content>
