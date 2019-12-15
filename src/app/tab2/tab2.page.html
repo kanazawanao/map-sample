@@ -6,4 +6,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <input type="text" placeholder="周辺施設を検索する" [(ngModel)]="value" />
+  <button (click)="search()">検索</button>
+  <google-map></google-map>
+  <div *ngFor="let result of results">
+    {{ result.name}}
+  </div>
+</ion-content>
